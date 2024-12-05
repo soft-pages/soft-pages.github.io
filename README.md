@@ -1,2 +1,2 @@
 ## Soft Pages
-Things [I](https://github.com/shanataru) want to share 💛
+Things I want to share from my [repository](https://github.com/shanataru) 💛
