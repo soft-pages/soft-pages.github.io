@@ -6,8 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toasty Run</title>
     <script type="module" crossorigin src="./assets/index-Dlp_atWt.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="button-container">
+      <button id="toggleFullscreenBtn" class="button">
+        Fullscreen
+      </button>
+      <button id="toggleSoundBtn" class="button">
+        Sound
+      </button>
+    </div>
     <div id="app"></div>
+    <script>
+      const fullscreenBtn = document.getElementById("toggleFullscreenBtn");
+
+      function toggleFullscreen(){
+        const docElm = document.documentElement;
+        if (!document.fullscreenElement) {
+          if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+          }
+        } else{
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          }
+        }
+      }
+
+      fullscreenBtn.addEventListener("click", toggleFullscreen);
+  </script>
   </body>
 </html>
